@@ -1,3 +1,3 @@
 function se -d "Creates GUI emacs connecting to client with sudo"
-  emacsclient -ta '' $argv -e '(find-file "/sudo::/etc/passwd")'
+  env SUDO_EDITOR=e sudo -e $argv
 end
